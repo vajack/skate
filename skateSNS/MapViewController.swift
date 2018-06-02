@@ -25,6 +25,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .restricted, .denied:
+            break
+        case .authorizedAlways, .authorizedWhenInUse:
+            break
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(locationManager.requestLocation())
     }

@@ -54,7 +54,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let longitude = "".appendingFormat("%.4f", location.longitude)
         print("location->" + latitude + ", " + longitude)
         
+        // ピン表示        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newLocation.coordinate
+        mapView.addAnnotation(annotation)
+        mapView.selectAnnotation(annotation, animated: true)
         
+        mapView.showAnnotations(mapView.annotations, animated: true)
         
     }
     

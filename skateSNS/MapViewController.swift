@@ -18,6 +18,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager = CLLocationManager()
         locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+        
+        mapView.userTrackingMode = MKUserTrackingMode.followWithHeading
+        mapView.showsUserLocation = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +45,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locationManager.requestLocation())
+        guard let newLocation = locations.last else {
+            return
+        }
+        
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
+        let latitude = "".appendingFormat("%.4f", location.latitude)
+        let longitude = "".appendingFormat("%.4f", location.longitude)
+        print("location->" + latitude + ", " + longitude)
+        
+        
+        
     }
     
 }

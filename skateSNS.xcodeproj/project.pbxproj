@@ -14,6 +14,9 @@
 		05BECC192098374500BE0961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BECC172098374500BE0961 /* LaunchScreen.storyboard */; };
 		05BECC242098374500BE0961 /* skateSNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BECC232098374500BE0961 /* skateSNSTests.swift */; };
 		05BECC2F2098374500BE0961 /* skateSNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BECC2E2098374500BE0961 /* skateSNSUITests.swift */; };
+		05BECC3E209AB17F00BE0961 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BECC3C209AB17E00BE0961 /* MapViewController.swift */; };
+		05BECC3F209AB17F00BE0961 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05BECC3D209AB17F00BE0961 /* MapViewController.xib */; };
+		05BECC42209AB21500BE0961 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BECC41209AB21500BE0961 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		05BECC2A2098374500BE0961 /* skateSNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skateSNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BECC2E2098374500BE0961 /* skateSNSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skateSNSUITests.swift; sourceTree = "<group>"; };
 		05BECC302098374500BE0961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05BECC3C209AB17E00BE0961 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		05BECC3D209AB17F00BE0961 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		05BECC41209AB21500BE0961 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BECC42209AB21500BE0961 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				05BECC222098374500BE0961 /* skateSNSTests */,
 				05BECC2D2098374500BE0961 /* skateSNSUITests */,
 				05BECC0C2098374300BE0961 /* Products */,
+				05BECC40209AB21500BE0961 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +107,8 @@
 			children = (
 				05BECC0E2098374300BE0961 /* AppDelegate.swift */,
 				05BECC102098374300BE0961 /* ViewController.swift */,
+				05BECC3C209AB17E00BE0961 /* MapViewController.swift */,
+				05BECC3D209AB17F00BE0961 /* MapViewController.xib */,
 				05BECC122098374300BE0961 /* Main.storyboard */,
 				05BECC152098374500BE0961 /* Assets.xcassets */,
 				05BECC172098374500BE0961 /* LaunchScreen.storyboard */,
@@ -123,6 +133,14 @@
 				05BECC302098374500BE0961 /* Info.plist */,
 			);
 			path = skateSNSUITests;
+			sourceTree = "<group>";
+		};
+		05BECC40209AB21500BE0961 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05BECC41209AB21500BE0961 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +250,7 @@
 				05BECC192098374500BE0961 /* LaunchScreen.storyboard in Resources */,
 				05BECC162098374500BE0961 /* Assets.xcassets in Resources */,
 				05BECC142098374300BE0961 /* Main.storyboard in Resources */,
+				05BECC3F209AB17F00BE0961 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05BECC112098374300BE0961 /* ViewController.swift in Sources */,
+				05BECC3E209AB17F00BE0961 /* MapViewController.swift in Sources */,
 				05BECC0F2098374300BE0961 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
